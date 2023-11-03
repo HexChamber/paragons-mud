@@ -4,7 +4,7 @@ from evennia.utils import iter_to_str
 from evennia.utils.evtable import EvTable 
 
 from .command import Command 
-from typeclasses.weapons import BareHand
+from typeclasses.gear import BareHand
 
 
 
@@ -103,7 +103,7 @@ class CmdAttack(Command):
 
 
 
-class CmdWield(Comman):
+class CmdWield(Command):
     """\
     Wield a weapon.
 
@@ -159,9 +159,9 @@ class CmdUnwield(Command):
             return 
         freed_hands = caller.at_at_unwield()
         if freed_hands:
-            hand = "hand" if len(free_hands) == 1 else "s"
+            hand = "hand" if len(freed_hands) == 1 else "s"
             self.caller.at_emote(
-                f"$conj(releases) the {{weapon}} from $pron(your) {iter_to_str(free_hands)}."
+                f"$conj(releases) the {{weapon}} from $pron(your) {iter_to_str(freed_hands)}."
             )
         
 
