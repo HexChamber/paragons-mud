@@ -18,14 +18,14 @@ from evennia import default_cmds
 from evennia.contrib.game_systems.clothing import ClothedCharacterCmdSet
 from evennia.contrib.game_systems.containers.containers import ContainerCmdSet
 from evennia.contrib.grid.xyzgrid.commands import XYZGridCmdSet
-from evennia.contrib.rpg.character_creator.character_creator import ContribCmdChargenCreate
+from evennia.contrib.rpg.character_creator.character_creator import ContribCmdCharCreate
 from evennia.contrib.game_systems.crafting.crafting import CmdCraft
 
 from commands.combat import CombatCmdSet
 from commands.skills import SkillCmdSet 
 from commands.interact import InteractCmdSet 
 from commands.account import AccountOptsCmdSet
-from command.shops import CmdMoney
+from commands.shops import CmdMoney
 
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
@@ -74,7 +74,7 @@ class AccountCmdSet(default_cmds.AccountCmdSet):
         #
         # any commands you add below will overload the default ones.
         #
-        self.add(ContribCmdChargenCreate)
+        self.add(ContribCmdCharCreate)
         self.add(AccountOptsCmdSet)
         
 
