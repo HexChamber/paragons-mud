@@ -9,7 +9,7 @@ from typeclasses.gear import BareHand
 
 
 class CmdAttack(Command):
-    """\
+    """
     Attack an enemy with your equipped weapon.
 
     Usage:
@@ -104,7 +104,7 @@ class CmdAttack(Command):
 
 
 class CmdWield(Command):
-    """\
+    """
     Wield a weapon.
 
     Usage:
@@ -168,7 +168,6 @@ class CmdUnwield(Command):
 
 class CmdFlee(Command):
     """ 
-    \
     Attempt to escapesdo
 
     Usage:
@@ -211,7 +210,7 @@ class CmdFlee(Command):
 
 
 class CmdRespawn(Command):
-    """\
+    """
     Return to the center of town when defeated, with full health.
     
     Usage:
@@ -231,7 +230,7 @@ class CmdRespawn(Command):
 
 
 class CmdRevive(Command): 
-    """\
+    """
     Revive another player who has been defeatueeijw
     """
     key = 'revive'
