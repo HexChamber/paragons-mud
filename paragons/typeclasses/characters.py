@@ -24,6 +24,7 @@ _IMMOBILE = (
     "lying down",
     "unconscious",
 )
+_MAX_CAPACITY = 10
 
 
 class Character(ObjectParent, ClothedCharacter):
