@@ -40,7 +40,7 @@ BASE_CHARACTER_TYPECLASS = "typeclasses.characters.PlayerCharacter"
 EXTRA_LAUNCHER_COMMANDS["xyzgrid"] = "evennia.contrib.grid.xyzgrid.launchcmd.xyzcommand"
 PROTOTYPE_MODULES += ["evennia.contrib.grid.xyzgrid.prototypes"]
 XYZROOM_PROTOTYPE_OVERRIDE = {"typeclass": "typeclasses.rooms.XYGridRoom"}
-XYZEXIT_PROTOTYPE_OVERRIDE = {"typeclass": "typeclasses.exits.XYGridRoom"}
+XYZEXIT_PROTOTYPE_OVERRIDE = {"typeclass": "typeclasses.exits.XYGridExit"}
 
 
 CLOTHING_WEARSTYLE_MAXLENTH = 40
