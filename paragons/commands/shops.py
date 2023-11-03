@@ -2,7 +2,7 @@ from collections import Counter
 from evennia import CmdSet 
 from evennia.utils import make_iter 
 from evennia.utils.evtable import EvTable
-from commands import Command
+from .command import Command
 
 
 
