@@ -32,7 +32,63 @@ from evennia.settings_default import *
 ######################################################################
 
 # This is the name of your game. Make it catchy!
-SERVERNAME = "paragons"
+SERVERNAME = "Paragons MUD"
+
+BASE_CHARACTER_TYPECLASS = "typeclasses.characters.PlayerCharacter"
+
+
+EXTRA_LAUNCHER_COMMANDS["xyzgrid"] = "evennia.contrib.grid.xyzgrid.launchcmd.xyzcommand"
+PROTOTYPE_MODULES += ["evennia.contrib.grid.xyzgrid.prototypes"]
+XYZROOM_PROTOTYPE_OVERRIDE = {"typeclass": "typeclasses.rooms.XYGridRoom"}
+XYZEXIT_PROTOTYPE_OVERRIDE = {"typeclass": "typeclasses.exits.XYGridRoom"}
+
+
+CLOTHING_WEARSTYLE_MAXLENTH = 40
+CLOTHING_TYPE_ORDERED = [
+    "hat",
+    "jewelry",
+    "chestguard",
+    "top",
+    "undershirt",
+    "bracers",
+    "gloves",
+    "fullbody",
+    "legguard",
+    "bottom",
+    "underpants",
+    "socks",
+    "shoes",
+    "accessory"
+]
+CLOTHING_TYPE_AUTOCOVER = {
+    "top": ["undershirt"],
+    "chestguard": ["top", "undershirt"],
+    "bottom": ["underpants"],
+    "legguard": ["bottom", "underpants"],
+    "fullbody": ["undershirt", "underpants"],
+    "shoes": ["socks"]
+}
+CLOTHING_TYPE_LIMIT = {
+    "chestguard": 1,
+    "legguard": 1,
+    "bracers": 1,
+    "hat": 1,
+    "gloves": 1,
+    "socks": 1,
+    "shoes": 1
+}
+CRAFT_RECIPE_MODULES = [
+    "world.recipes.smithing",
+    "world.recipes.carving",
+    "world.recipes.leathercraft",
+]
+CHARGEN_MENU = "world.chargen_menu"
+AUTO_CREATE_CHARACTER_WITH_ACCOUNT = False 
+AUTO_PUPPET_ON_LOGIN = False 
+MAX_NR_CHARACTERS = 3
+
+CMDSET_UNLOGGEDIN = "evennia.contrib.base_systems.menu_login.UnloggedinCmdSet"
+CONNECTION_SCREEN_MODULE = "evennia.contrib.base_systems.menu_login.connection_screens"
 
 
 ######################################################################
